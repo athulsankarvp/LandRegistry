@@ -3,7 +3,6 @@ import Login from "./login.component";
 import ReactDOM from 'react-dom';
 import './index.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import RegisterBuyer from "./RegisterBuyer";
 import RegisterSeller from "./RegisterSeller";
@@ -34,5 +33,3 @@ ReactDOM.render(
   </ThemeContextWrapper>,
   document.getElementById('root')
 );
-
-reportWebVitals();

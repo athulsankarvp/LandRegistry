@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { FormFile, Button, FormControl,FormGroup, Spinner } from 'react-bootstrap'
 import LandContract from "./artifacts/Land.json"
 import getWeb3 from "./getWeb3"
 import ipfs from './ipfs'
+import { Buffer } from 'buffer'
+// import { CID } from 'ipfs-http-client/d'
+
 
 class RegisterBuyer extends Component {
     constructor(props) {
@@ -58,18 +61,19 @@ class RegisterBuyer extends Component {
 
     //IPFS document upload 
     addDoc = async () => {
-        await ipfs.files.add(this.state.buffer2, (error, result) => {
+        await ipfs.add(this.state.buffer2, (error, result) => {
             if (error) {
-                alert(error)
-                console.log('IPFS upload error encountered')
-                return
+                console.log(error);
             }
-
+            else{
+                console.log('IPFS upload success');
+            }
             // alert(result[0].hash)
             this.setState({ document: result[0].hash });
             console.log('document:', this.state.document);
         })
     }
+
     //Buyer registration process
     RegisterBuyer = async () => {
         this.addDoc();

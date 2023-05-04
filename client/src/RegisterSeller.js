@@ -20,7 +20,7 @@ class RegisterSeller extends Component {
             panNumber: '',
             landsOwned: '',
             isVerified: false,
-            buffer: null,
+            buffer2: null,
             document: '',
         }
         this.captureDoc = this.captureDoc.bind(this);
@@ -58,7 +58,7 @@ class RegisterSeller extends Component {
 
     //IPFS document upload 
     addDoc = async () => {
-        await ipfs.add(this.state.buffer, (error, result) => {
+        await ipfs.add(this.state.buffer2, (error, result) => {
             if (error) {
                 console.log(error);
             }
@@ -125,8 +125,8 @@ class RegisterSeller extends Component {
         const reader = new window.FileReader()
         reader.readAsArrayBuffer(files)
         reader.onloadend = () => {
-          this.setState({ buffer: Buffer(reader.result) })
-          console.log('buffer', this.state.buffer)
+          this.setState({ buffer2: Buffer(reader.result) })
+          console.log('buffer', this.state.buffer2)
         }
         console.log('Capture Document')
       }
