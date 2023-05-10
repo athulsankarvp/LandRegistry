@@ -285,7 +285,7 @@ class SDash extends Component {
               </Row>
             </LoadingContainer>
           </DrizzleProvider>
-          <Row>
+          {/* <Row>
             <Col lg="4">
               <Card>
                 <CardHeader>
@@ -298,7 +298,7 @@ class SDash extends Component {
                 </CardBody>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
         </div>
       </>
 

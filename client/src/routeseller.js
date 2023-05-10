@@ -8,7 +8,7 @@ import updateSeller from "./views/updateSeller";
 var routes = [
   {
     path: "/SellerDashboard",
-    name: "Dashboard",
+    name: "Seller Dashboard",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-chart-pie-36",
     component: SellerDashboard,
@@ -38,14 +38,14 @@ var routes = [
     component: ApproveRequest,
     layout: "/Seller",
   },
-  {
-    path: "/viewImage",
-    name: "Land Gallery",
-    rtlName: "الرموز",
-    icon: "tim-icons icon-image-02",
-    component: viewImage,
-    layout: "/Seller",
-  },
+  // {
+  //   path: "/viewImage",
+  //   name: "Land Gallery",
+  //   rtlName: "الرموز",
+  //   icon: "tim-icons icon-image-02",
+  //   component: viewImage,
+  //   layout: "/Seller",
+  // },
   {
     path: "/updateSeller",
     name: "",

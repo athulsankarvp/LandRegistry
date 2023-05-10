@@ -76,8 +76,8 @@ class RegisterBuyer extends Component {
 
     //Buyer registration process
     RegisterBuyer = async () => {
-        this.addDoc();
-        await new Promise(resolve => setTimeout(resolve, 10000));
+        // this.addDoc();
+        await new Promise(resolve => setTimeout(resolve, 100));
         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
         if (this.state.name == '' || this.state.age == '' || this.state.city == '' || this.state.aadharNumber == '' || this.state.panNumber == '') {
@@ -265,13 +265,13 @@ class RegisterBuyer extends Component {
                                     </div>
                                 </FormGroup>
 
-                                <FormGroup>
+                                {/* <FormGroup>
                                     <label>Add your Aadhar Card (PDF Format)</label>
                                     <FormFile
                                         id="File2"
                                         onChange={this.captureDoc}
                                     />
-                                </FormGroup>
+                                </FormGroup> */}
 
                                 <Button onClick={this.RegisterBuyer} className="btn-primary" style={{margin:"10px 0px 0px 0px"}}>
                                     Register Buyer

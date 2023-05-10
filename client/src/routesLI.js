@@ -7,7 +7,7 @@ import TransactionInfo from "./views/TransactionInfo";
 var routes = [
   {
     path: "/LIDashboard",
-    name: "Dashboard",
+    name: "Inspector Dashboard",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-chart-pie-36",
     component: LIDashboard,
@@ -15,7 +15,7 @@ var routes = [
   },
   {
     path: "/BuyerInfo",
-    name: "BuyerInfo",
+    name: "Buyer Info",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-single-02",
     component: BuyerInfo,
@@ -23,7 +23,7 @@ var routes = [
   },
   {
     path: "/SellerInfo",
-    name: "SellerInfo",
+    name: "Seller Info",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-single-02",
     component: SellerInfo,
@@ -31,7 +31,7 @@ var routes = [
   },
   {
     path: "/TransactionInfo",
-    name: "TransactionInfo",
+    name: "Transaction Info",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-send",
     component: TransactionInfo,

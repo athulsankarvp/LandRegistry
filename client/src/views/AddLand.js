@@ -119,10 +119,10 @@ class AddLand extends Component {
 
   //QmYdztkcPJLmGmwLmM4nyBfVatoBMRDuUjmgBupjmTodAP
   addLand = async () => {
-    this.addimage();
-    this.addDoc();
+    // this.addimage();
+    // this.addDoc();
     // alert('After add image')
-    await new Promise(resolve => setTimeout(resolve, 15000));
+    await new Promise(resolve => setTimeout(resolve, 100));
     if (this.state.area == '' || this.state.city == '' || this.state.stateLoc == '' || this.state.price == '' || this.state.propertyPID == '' || this.state.surveyNum == '') {
       alert("All the fields are compulsory!");
     } else if ((!Number(this.state.area)) || (!Number(this.state.price))) {
@@ -177,7 +177,7 @@ class AddLand extends Component {
       this.setState({ buffer: Buffer(reader.result) })
       console.log('buffer', this.state.buffer)
     }
-    console.log('caoture file...')
+    console.log('capture file...')
   }
   captureDoc(event) {
     event.preventDefault()
@@ -316,7 +316,7 @@ class AddLand extends Component {
                       </FormGroup>
                     </Col>
                   </Row>
-                  <Row>
+                   {/* <Row>
                     <Col md="12">
                       <FormGroup>
                         <label>Insert Land Image</label>
@@ -337,7 +337,7 @@ class AddLand extends Component {
                         />
                       </FormGroup>
                     </Col>
-                  </Row>
+                  </Row> */}
                 </Form>
               </CardBody>
               <CardFooter>

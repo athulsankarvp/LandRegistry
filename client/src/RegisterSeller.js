@@ -72,8 +72,8 @@ class RegisterSeller extends Component {
     }
     //Seller Registration
     RegisterSeller = async () => {
-        this.addDoc();
-        await new Promise(resolve => setTimeout(resolve, 10000));
+        // this.addDoc();
+        await new Promise(resolve => setTimeout(resolve, 100));
         if (this.state.name == '' || this.state.age == '' || this.state.aadharNumber == '' || this.state.panNumber == '' || this.state.landsOwned == '') {
             alert("All the fields are compulsory!");
         } else if (!Number(this.state.aadharNumber) || this.state.aadharNumber.length != 12) {
@@ -231,13 +231,13 @@ class RegisterSeller extends Component {
                                     </div>
                                 </FormGroup>
 
-                                <FormGroup>
+                                {/* <FormGroup>
                                     <label>Add your Aadhar Card (PDF Format)</label>
                                     <FormFile
                                         id="File2"
                                         onChange={this.captureDoc}
                                     />
-                                </FormGroup>
+                                </FormGroup> */}
 
                                 <Button onClick={this.RegisterSeller} className="btn-primary" style={{margin:"10px 0px 0px 0px" }}>
                                     Register Seller
