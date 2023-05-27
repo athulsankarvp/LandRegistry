@@ -24,7 +24,7 @@ class RegisterSeller extends Component {
             document: '',
         }
         this.captureDoc = this.captureDoc.bind(this);
-        this.addDoc = this.addDoc.bind(this);
+        // this.addDoc = this.addDoc.bind(this);
     }
 
     componentDidMount = async () => {
@@ -57,19 +57,19 @@ class RegisterSeller extends Component {
     };
 
     //IPFS document upload 
-    addDoc = async () => {
-        await ipfs.add(this.state.buffer2, (error, result) => {
-            if (error) {
-                console.log(error);
-            }
-            else{
-                console.log('IPFS upload success');
-            }
-            // alert(result[0].hash)
-            this.setState({ document: result[0].hash });
-            console.log('document:', this.state.document);
-        })
-    }
+    // addDoc = async () => {
+    //     await ipfs.add(this.state.buffer2, (error, result) => {
+    //         if (error) {
+    //             console.log(error);
+    //         }
+    //         else{
+    //             console.log('IPFS upload success');
+    //         }
+    //         // alert(result[0].hash)
+    //         this.setState({ document: result[0].hash });
+    //         console.log('document:', this.state.document);
+    //     })
+    // }
     //Seller Registration
     RegisterSeller = async () => {
         // this.addDoc();

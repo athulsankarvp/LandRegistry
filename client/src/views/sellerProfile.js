@@ -160,10 +160,10 @@ class sellerProfile extends Component {
         </Row>
         <Row>
           <Col md="12">
-            <FormGroup>
+            {/* <FormGroup>
               <label>Your Aadhar Document</label>
               <div class="post-meta"><span class="timestamp"> <a href={`https://ipfs.io/ipfs/${seller[5]}`} target="_blank">Here</a></span></div>
-            </FormGroup>
+            </FormGroup> */}
           </Col>
         </Row></>);
 

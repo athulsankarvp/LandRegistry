@@ -118,16 +118,17 @@ class viewImage extends Component {
             <div class="thumbnail">
               <div class="date">
                 <div class="day">{i}</div>
-              </div><img src={`https://ipfs.io/ipfs/${landImg}`} />
-            </div>
+              </div>
+              {/* <img src={`https://ipfs.io/ipfs/${landImg} */}
+          </div>
 
             <div class="post-content">
-              <div class="category">Photos</div>
+              {/* <div class="category">Photos</div> */}
               <h1 class="title">{rowsArea[i - 1]} Sq. m.</h1>
               <h2 class="sub_title">{rowsCity[i - 1]}, {rowsState[i - 1]}</h2>
               <p class="description">PID: {rowsPID[i - 1]}<br /> Survey No.: {rowsSurvey[i - 1]}</p>
               <div class="post-meta"><span class="timestamp">Price: ₹ {rowsPrice[i - 1]}</span></div>
-              <div class="post-meta"><span class="timestamp">View Verified Land  <a href={`https://ipfs.io/ipfs/${document}`} target="_blank">Document</a></span></div>
+              {/* <div class="post-meta"><span class="timestamp">View Verified Land  <a href={`https://ipfs.io/ipfs/${document}`} target="_blank">Document</a></span></div> */}
             </div>
           </div>
         </Col>)

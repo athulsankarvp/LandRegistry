@@ -5,7 +5,6 @@ import LandContract from "./artifacts/Land.json"
 import getWeb3 from "./getWeb3"
 import ipfs from './ipfs'
 import { Buffer } from 'buffer'
-// import { CID } from 'ipfs-http-client/d'
 
 
 class RegisterBuyer extends Component {
@@ -27,7 +26,7 @@ class RegisterBuyer extends Component {
             document: '',
         }
         this.captureDoc = this.captureDoc.bind(this);
-        this.addDoc = this.addDoc.bind(this);
+        // this.addDoc = this.addDoc.bind(this);
     }
 
     componentDidMount = async () => {
@@ -60,19 +59,26 @@ class RegisterBuyer extends Component {
     };
 
     //IPFS document upload 
-    addDoc = async () => {
-        await ipfs.add(this.state.buffer2, (error, result) => {
-            if (error) {
-                console.log(error);
-            }
-            else{
-                console.log('IPFS upload success');
-            }
-            // alert(result[0].hash)
-            this.setState({ document: result[0].hash });
-            console.log('document:', this.state.document);
-        })
-    }
+    // addDoc = async () => {
+    //     await ipfs.add(this.state.buffer2, (error, result) => {
+    //         if (error) {
+    //             console.log(error);
+    //         }
+    //         else{
+    //             console.log('IPFS upload success');
+    //         }
+    //         // alert(result[0].hash)
+    //         this.setState({ document: result[0].hash });
+    //         console.log('document:', this.state.document);
+    //     })
+    // }
+    // addDoc = async () => {
+    //     const file = await ipfs.add(this.state.buffer2);
+    //     const ipfshash= file.cid.toString();
+    //         // alert(result[0].hash)
+    //     this.setState({ document: ipfshash });
+    //     console.log('document:', this.state.document);
+    // };
 
     //Buyer registration process
     RegisterBuyer = async () => {
@@ -148,6 +154,15 @@ class RegisterBuyer extends Component {
         }
         console.log('Document Captured')
     }
+    // captureDoc(event) {
+    //     event.preventDefault()
+    //     const file2 = event.target.files[0]
+    //     file2.onloadend = () => {
+    //         this.setState({ buffer2: file2 })
+    //         console.log('buffer2', this.state.buffer2)
+    //     }
+    //     console.log('Document Captured')
+    // }
 
 
     render() {

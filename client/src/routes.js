@@ -7,7 +7,7 @@ import updateBuyer from "./views/updateBuyer";
 
 var routes = [
   {
-    path: "/dashboard",
+    path: "/Dashboard",
     name: "Buyer Dashboard",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-chart-pie-36",

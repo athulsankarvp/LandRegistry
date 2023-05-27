@@ -84,7 +84,7 @@ function Admin(props) {
         return routes[i].name;
       }
     }
-    return "Brand";
+    return "Buyer Dashboard";
   };
 
   return (
@@ -109,7 +109,7 @@ function Admin(props) {
               />
               <Switch>
                 {getRoutes(routes)}
-                {/* <Redirect from="*" to="/admin/dashboard" /> */}
+                {/* <Redirect from="*" to="/admin/Dashboard" /> */}
               </Switch>
               <Footer fluid />
             </div>

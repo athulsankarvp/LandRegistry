@@ -15,6 +15,7 @@ import "./assets/css/nucleo-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
+import Test from './Test';
 
 ReactDOM.render(
   <ThemeContextWrapper>
@@ -24,6 +25,7 @@ ReactDOM.render(
           <Route exact path='/' component={Login} />
           <Route path="/RegisterBuyer" component={RegisterBuyer} />
           <Route path="/RegisterSeller" component={RegisterSeller} />
+          <Route path="/test" component={Test} />
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           <Route path="/LI" render={(props) => <LI {...props} />} />
           <Route path="/Seller" render={(props) => <Seller {...props} />} />

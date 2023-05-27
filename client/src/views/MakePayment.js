@@ -41,7 +41,7 @@ class Dashboard extends Component {
     // alert(amount);
 
     amount = amount * 0.0000057;
-    alert(amount);
+    alert("Total Cost: "+ amount +"ETH");
     await this.state.LandInstance.methods.payment(
       seller_address,
       land_id
